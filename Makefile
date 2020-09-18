@@ -15,7 +15,7 @@ all :
 	avr-size --format=avr --mcu=$(MCU) $(TARGET).elf
 
 
-program :
+flash :
 	avrdude -c $(PROGRAMMER) -p m328p -P $(PORT) -U flash:w:$(TARGET).hex
 
 clean :
